@@ -13,7 +13,8 @@ class AndroidArtifacts implements Artifacts {
     }
 
     def all(String publicationName, Project project) {
-        [sourcesJar(project), javadocJar(project), mainJar(project)]
+        //[sourcesJar(project), javadocJar(project), mainJar(project)]
+        [sourcesJar(project), mainJar(project)]
     }
 
     def sourcesJar(Project project) {
