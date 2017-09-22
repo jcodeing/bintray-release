@@ -17,10 +17,13 @@ compileGroovy {
 }
 
 publish {
-    userOrg = 'novoda'
-    groupId = 'com.novoda'
+    groupId = 'com.jcodeing.fork'
     artifactId = rootProject.name
     version = project.version
     description = 'Super duper easy way to release your Android and other artifacts to bintray'
     website = "https://github.com/novoda/${rootProject.name}"
+
+    repoName = "fork"
+    bintrayUser = System.getenv('BINTRAY_USER')
+    bintrayKey = System.getenv('BINTRAY_APIKEY')
 }
